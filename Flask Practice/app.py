@@ -1,6 +1,6 @@
 # DevPSU Activity 
 
-from flask import Flask, render_template
+from flask import Flask, render_template, json
 
 app = Flask(__name__)
 
@@ -15,7 +15,8 @@ def helloName(name=None):
 
 @app.route('/parks/')
 def parks():
-    parks = ['Yellowstone', "Yosemite", "Glacier"]
+    with open('parks.json', 'r') as f:
+        parks = json.load(f)
 
     return render_template("parks.html", parks=parks)
 
