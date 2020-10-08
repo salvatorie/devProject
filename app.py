@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def helloWorld():
-        return "Hello World and Elliott"
+        return "Fuck this Git shit I have never been more confused in my life"
 
 if __name__ == "__main__":
     app.run()
