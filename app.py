@@ -1,12 +1,12 @@
 # DevPSU Activity 
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def helloWorld():
-        return "Fuck this Git shit I have never been more confused in my life"
+        return render_template(index.html)
 
 if __name__ == "__main__":
     app.run()
