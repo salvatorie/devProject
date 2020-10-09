@@ -17,8 +17,30 @@ def helloName(name=None):
 def parks():
     with open('parks.json', 'r') as f:
         parks = json.load(f)
-
+    
     return render_template("parks.html", parks=parks)
+
+@app.route('/parks/name/')
+def parksName():
+    with open('parks.json', 'r') as f:
+        parks = json.load(f)
+    name = "name"
+    return render_template("parks.html", parks=parks, name=name)
+
+
+@app.route('/parks/loc/')
+def parksLoc():
+    with open('parks.json', 'r') as f:
+        parks = json.load(f)
+    loc = "loc"
+    return render_template("parks.html", parks=parks, loc=loc)
+
+@app.route('/parks/desc/')
+def parksDesc():
+    with open('parks.json', 'r') as f:
+        parks = json.load(f)
+    desc = "desc"
+    return render_template("parks.html", parks=parks, desc=desc)
 
 if __name__ == "__main__":
     app.run()
