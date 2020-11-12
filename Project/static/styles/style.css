@@ -1,0 +1,14 @@
+html {
+    background-color: #faf0e6;
+    font-family: "Cambria", serif;
+}
+
+.container{
+    background-color: #faf0e6;
+}
+
+.headers {
+    columns: 360px 3;
+    column-gap: 10px;
+}
+
